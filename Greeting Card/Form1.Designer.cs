@@ -29,7 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            OpenButton = new Button();
             SuspendLayout();
+            // 
+            // OpenButton
+            // 
+            OpenButton.BackColor = Color.White;
+            OpenButton.Font = new Font("Segoe UI", 16F);
+            OpenButton.ForeColor = Color.Navy;
+            OpenButton.Location = new Point(101, 464);
+            OpenButton.Name = "OpenButton";
+            OpenButton.Size = new Size(293, 66);
+            OpenButton.TabIndex = 0;
+            OpenButton.Text = "Click to open your card!";
+            OpenButton.UseVisualStyleBackColor = false;
+            OpenButton.Visible = false;
+            OpenButton.Click += button1_Click;
             // 
             // Form1
             // 
@@ -37,12 +52,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gold;
             ClientSize = new Size(537, 608);
+            Controls.Add(OpenButton);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "Birthday Card";
+            Click += Form1_Click;
+            Paint += Form1_Paint;
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button OpenButton;
     }
 }
