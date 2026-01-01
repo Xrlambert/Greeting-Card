@@ -1,3 +1,5 @@
+using System.Media;
+
 namespace Greeting_Card
 {
     public partial class Form1 : Form
@@ -5,7 +7,7 @@ namespace Greeting_Card
 
         bool showCover = true;
         Random rand = new Random();
-
+        SoundPlayer horn = new SoundPlayer(Properties.Resources.horn);
         public Form1()
         {
             InitializeComponent();
@@ -23,6 +25,7 @@ namespace Greeting_Card
             else
             {
                 DrawInside(g);
+                horn.Play();
             }
 
         }
@@ -61,7 +64,7 @@ namespace Greeting_Card
             {
                 g.DrawString("Wishing you a day filled with\nhappiness" +
                              " and a year filled with joy!\n\n" +
-                             "Happy Birthday!", insideFont, Brushes.MediumVioletRed, 10, 100);
+                             "Happy Birthday!", insideFont, Brushes.LimeGreen, 10, 100);
             }
             Thread.Sleep(200);
             // Randomly place some confetti
