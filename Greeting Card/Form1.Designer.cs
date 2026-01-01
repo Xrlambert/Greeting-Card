@@ -37,7 +37,7 @@
             OpenButton.BackColor = Color.White;
             OpenButton.Font = new Font("Segoe UI", 16F);
             OpenButton.ForeColor = Color.Navy;
-            OpenButton.Location = new Point(101, 464);
+            OpenButton.Location = new Point(119, 469);
             OpenButton.Name = "OpenButton";
             OpenButton.Size = new Size(293, 66);
             OpenButton.TabIndex = 0;
@@ -51,8 +51,9 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gold;
-            ClientSize = new Size(537, 608);
+            ClientSize = new Size(552, 634);
             Controls.Add(OpenButton);
+            DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "Birthday Card";
